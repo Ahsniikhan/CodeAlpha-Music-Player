@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Music Mood Player</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <div class="layout">
+
+    <!-- LEFT SIDE -->
+    <div class="left-content">
+      <h1 class="main-heading glow">
+        Ahsan’s Music Player
+        <span>Vibes • Peace</span>
+      </h1>
+    </div>
+
+    <!-- RIGHT SIDE -->
+    <div class="right-content">
+
+      <!-- ✅ ONLY ONE PLAYER (INSIDE layout) -->
+      <div class="player">
+
+        <div class="music-waves">
+          <span></span><span></span><span></span><span></span><span></span>
+        </div>
+
+        <div class="cover" id="cover"></div>
+
+        <div class="song-details">
+          <h2 id="artist">Singer Name</h2>
+          <p id="title">Song Title</p>
+        </div>
+
+        <div class="controls">
+          <div class="progress-container" id="progressContainer">
+            <div class="progress" id="progress"></div>
+          </div>
+
+          <div class="time">
+            <span id="currentTime">0:00</span>
+            <span id="duration">0:00</span>
+          </div>
+
+          <div class="buttons">
+            <span class="btn" onclick="prevSong()">⏮</span>
+            <span class="btn play" onclick="playPause()">⏯</span>
+            <span class="btn" onclick="nextSong()">⏭</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <audio id="audio"></audio>
+  <script src="script.js"></script>
+
+</body>
+
+</html>
